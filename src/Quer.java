@@ -11,7 +11,7 @@ public class Quer {
 	public static void main(String[] args) {
 		long startTime = System.currentTimeMillis(); 
 		double time = (System.currentTimeMillis()-startTime)/1000.0; 
-		System.out.println("start main");
+		System.out.println("Lets fetz");
 		long values[] = calculateMultiplicativePersistence(Integer.parseInt(args[0]));
 		
 		for(int i = 0; i < values.length; i++) {
@@ -51,7 +51,7 @@ public class Quer {
 		LinkedList<Long> digits = convertLongValueToDigitList(number);
 		int greatestDigitIndex = 0;
 		long greatestDigitValue = 0;
-		boolean youShallIncrement = false;
+		boolean yoIncrementMaDigits = false;
 		
 		digits.set(digits.size() - 1, digits.get(digits.size() - 1) + 1l);
 		
@@ -76,17 +76,17 @@ public class Quer {
 							greatestDigitValue = digits.get(i - 1);
 						}
 					}
-					youShallIncrement = true;
+					yoIncrementMaDigits = true;
 				}
 			}
 			
-			if(youShallIncrement) {
+			if(yoIncrementMaDigits) {
 				
 				for(int i = greatestDigitIndex; i < digits.size(); i++) {
 					digits.set(i, greatestDigitValue);
 				}
 
-				youShallIncrement = false;
+				yoIncrementMaDigits = false;
 			}
 		}
 		
